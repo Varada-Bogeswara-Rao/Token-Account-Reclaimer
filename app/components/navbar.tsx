@@ -10,13 +10,17 @@ const WalletMultiButton = dynamic(
 
 export default function Navbar() {
     return (
-        <nav className="w-full h-14 flex items-center justify-between px-6 bg-gray-900 text-white">
-            <div className="flex items-center gap-4">
-                <Link href="/">SolSweep</Link>
-                <Link href="/about">About</Link>
+        <nav className="w-full h-16 flex items-center justify-between px-6 border-b border-border/10 bg-background/50 backdrop-blur-md sticky top-0 z-50">
+            <div className="flex items-center gap-6">
+                <Link href="/" className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-violet-400">
+                    SolSweep
+                </Link>
+                <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                    About
+                </Link>
             </div>
             <div>
-                <WalletMultiButton />
+                <WalletMultiButton style={{ backgroundColor: 'transparent', border: '1px solid rgba(255,255,255,0.1)', height: '40px', fontSize: '14px', borderRadius: '8px' }} />
             </div>
         </nav>
     );
